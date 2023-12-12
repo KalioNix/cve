@@ -28,7 +28,7 @@ def send_log():
 
     # log.txt 내용을 전송하기 위한 HTTP GET 요청
     try:
-        response = requests.get("http://127.0.0.1:8080/test.jsp", params={"data": log_content})
+        response = requests.get("http://1.230.60.108:8080/test.jsp", params={"data": log_content})
         if response.status_code == 200:
             # 로그가 성공적으로 전송되면 log.txt 파일 초기화
             open("log.txt", "w").close()
