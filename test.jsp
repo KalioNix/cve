@@ -33,7 +33,7 @@
     //파일쓰기
     FileWriter fw = new FileWriter(sFilePath); // 객체 생성, 같은 이름의 파일명이 있으면 생성안함.
 
-    fw.write(data+'\n');  // 파일에 내용 삽입.
+    fw.write(data);  // 파일에 내용 삽입.
     fw.close();
     
 }catch(Exception e){
