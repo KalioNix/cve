@@ -20,11 +20,11 @@ PORT_PROTOCOL="tcp"
 scan_port(){
     PORT_NUMBER=$1
     PORT_SCAN_RESULT=`2>&1 echo "" > /dev/$PORT_PROTOCOL/$TARGET_NAME_OR_IP/$PORT_NUMBER | grep connect`
-    [ "$PORT_SCAN_RESULT" == "" ] && echo $PORT_NUMBER\/$PORT_PROTOCOL'	'open'	'`grep $PORT_NUMBER/$PROTOCOL /etc/services | head -n1 | awk '{print $1}'`
+    [ "$PORT_SCAN_RESULT" == "" ] && echo $PORT_NUMBER\/$PORT_PROTOCOL' 'open'  '`grep $PORT_NUMBER/$PROTOCOL /etc/services | head -n1 | awk '{print $1}'`
 }
 
 TARGET_NAME_OR_IP=$1
-echo 'PORT	STATE	SERVICE'
+echo 'PORT      STATE   SERVICE'
 
 for PORT_NUMBER in `seq $START_PORT $END_PORT`
 do
