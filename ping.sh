@@ -11,5 +11,5 @@ echo
 read -p "Enther the subnet:  " SUBNET
 
 for IP in $(seq 1 254); do
-	ping -c 1 -w 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+	ping -c 1 -W 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
 done
